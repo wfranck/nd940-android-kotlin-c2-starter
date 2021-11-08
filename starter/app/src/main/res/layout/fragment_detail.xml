@@ -7,7 +7,7 @@
 
         <variable
             name="asteroid"
-            type="com.udacity.asteroidradar.Asteroid" />
+            type="com.udacity.asteroidradar.domain.Asteroid" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,6 +23,7 @@
             app:asteroidStatusImage="@{asteroid.potentiallyHazardous}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="Image Hazardous or Not"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@drawable/asteroid_safe" />
 
@@ -42,7 +43,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:focusable="true">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -57,7 +59,7 @@
                         android:layout_marginTop="4dp"
                         android:text="@{asteroid.closeApproachDate}"
                         android:textColor="@color/default_text_color"
-                        tools:text="2020-02-01" />
+                        tools:text="2021-11-10" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -94,6 +96,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="16dp"
+                        android:contentDescription="Astronomical unit definition"
                         app:srcCompat="@drawable/ic_help_circle" />
 
                 </LinearLayout>
